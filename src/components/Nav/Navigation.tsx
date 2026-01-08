@@ -16,8 +16,8 @@ import {
 const navLinks = [
     { name: 'Schedule', href: '/schedule' },
     { name: 'Travel', href: '/travel' },
-    { name: 'FAQs', href: '/faqs' },
-    { name: 'Gallery', href: '/gallery' },
+    { name: 'Menu', href: '/menu' },
+    { name: 'Info', href: '/important-information' },
 ]
 
 export function Nav() {

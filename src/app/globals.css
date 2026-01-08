@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-    --background: oklch(0.9062 0.0017 247.841);
+    --background: oklch(0.9851 0 0);
     --foreground: oklch(0.145 0 0);
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.145 0 0);
@@ -199,4 +199,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+}
+
+input {
+    font-size: 20px;
+}
+textarea {
+    font-size: 20px;
 }

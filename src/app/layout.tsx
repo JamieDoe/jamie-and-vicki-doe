@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 
 import './globals.css'
 import { Nav } from '@/components/Nav/Navigation'
+import { Toaster } from 'sonner'
 
 const lora = Lora({
     variable: '--font-lora',
@@ -39,6 +40,7 @@ export default function RootLayout({
             >
                 <Nav />
                 {children}
+                <Toaster />
             </body>
         </html>
     )
