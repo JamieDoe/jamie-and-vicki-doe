@@ -2,6 +2,12 @@ import { Schedule } from '@/components/Schedule'
 import { RsvpCta } from '@/components/RsvpCta'
 import { MapContainer } from '@/components/MapContainer'
 
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Travel Information',
+}
+
 export type TravelInfo = {
     location: string
     address: string

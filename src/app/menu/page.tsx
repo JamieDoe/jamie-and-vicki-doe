@@ -1,8 +1,12 @@
 import { RsvpCta } from '@/components/RsvpCta'
-import { buttonVariants } from '@/components/ui/button'
+
 import { menus, type MenuItem } from '@/data/menus.json'
-import { cn } from '@/lib/utils'
-import Link from 'next/link'
+
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Menu',
+}
 
 export default function MenuPage() {
     const { weddingBreakfast } = menus

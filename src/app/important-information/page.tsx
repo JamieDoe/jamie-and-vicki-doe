@@ -1,5 +1,11 @@
 import { importantInfo } from '@/data/important-info.json'
 
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Important Information',
+}
+
 export default function ImportantInformation() {
     return (
         <div className="min-h-screen pb-20 px-4 sm:px-6 lg:px-8 max-w-screen-2xl mx-auto text-center">

@@ -1,5 +1,10 @@
-import { HeroWrapper } from '@/components/HeroWrapper'
 import RsvpForm from '@/components/RsvpForm'
+
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'RSVP',
+}
 
 export default function RSVP() {
     return (

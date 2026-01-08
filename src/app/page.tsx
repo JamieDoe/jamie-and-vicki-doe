@@ -2,6 +2,15 @@ import Image from 'next/image'
 
 import { RsvpCta } from '@/components/RsvpCta'
 import { Schedule } from '@/components/Schedule'
+import { Metadata } from 'next'
+
+const metadata: Metadata = {
+    title: {
+        default: 'Jamie & Victoria 2026',
+        template: '%s | Jamie & Victoria 2026',
+    },
+    description: 'Join us for our wedding celebration on April 25, 2026!',
+}
 
 export default function Home() {
     return (

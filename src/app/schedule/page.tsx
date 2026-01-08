@@ -1,6 +1,12 @@
 import { Schedule } from '@/components/Schedule'
 import { RsvpCta } from '@/components/RsvpCta'
 
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Order of the Day',
+}
+
 export default function SchedulePage() {
     return (
         <main className="min-h-screen pb-20 px-4 sm:px-6 lg:px-8 max-w-screen-2xl mx-auto text-center">
