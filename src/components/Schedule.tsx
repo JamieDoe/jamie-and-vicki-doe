@@ -28,7 +28,7 @@ function ScheduleCard({
     return (
         <div
             className={cn(
-                'w-full flex flex-col md:flex-row gap-12 overflow-hidden max-w-[1400px] items-center',
+                'w-full flex flex-col md:flex-row gap-12 overflow-hidden max-w-[1400px] items-center text-center',
                 className
             )}
         >
@@ -48,7 +48,7 @@ function ScheduleCard({
 
             {/* Content Section */}
             <div className="w-full flex items-center justify-center p-8 md:p-12">
-                <div className="text-center space-y-6 font-orpheus-pro">
+                <div className="space-y-6 font-orpheus-pro">
                     <h1 className="hidden md:block text-7xl">{item.title}</h1>
 
                     <div className="space-y-10">

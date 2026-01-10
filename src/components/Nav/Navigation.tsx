@@ -11,7 +11,9 @@ import {
     DrawerTrigger,
     DrawerContent,
     DrawerClose,
+    DrawerTitle,
 } from '@/components/ui/drawer'
+import { DialogTitle } from '@radix-ui/react-dialog'
 
 const navLinks = [
     { name: 'Schedule', href: '/schedule' },
@@ -59,9 +61,10 @@ export function Nav() {
                     {/* Center Logo */}
                     <Link
                         href="/"
-                        className="absolute left-1/2 -translate-x-1/2 font-orpheus-pro text-3xl md:text-4xl tracking-wide"
+                        className="absolute left-1/2 -translate-x-1/2 font-orpheus-pro text-3xl md:text-4xl tracking-wide flex items-center justify-center gap-2"
                     >
-                        V&J 2026
+                        V&J
+                        <span className="hidden sm:block"> 2026</span>
                     </Link>
 
                     <MobileNav />
@@ -94,12 +97,20 @@ function MobileNav() {
                     <DrawerClose className="absolute top-0 right-0 p-4 cursor-pointer">
                         <X />
                     </DrawerClose>
+                    <DrawerTitle className="sr-only">
+                        Navigation Menu
+                    </DrawerTitle>
                     <ul className="flex flex-col h-full text-5xl items-center justify-center gap-12 font-orpheus-pro">
                         {navLinks.map(({ name, href }) => (
                             <li key={href}>
-                                <Link href={href} className="block w-full p-4 ">
-                                    {name}
-                                </Link>
+                                <DrawerClose asChild>
+                                    <Link
+                                        href={href}
+                                        className="block w-full p-4 "
+                                    >
+                                        {name}
+                                    </Link>
+                                </DrawerClose>
                             </li>
                         ))}
                     </ul>

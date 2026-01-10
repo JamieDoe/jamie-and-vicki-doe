@@ -16,8 +16,8 @@ export type ScheduleItem = {
 export const schedule: ScheduleItem[] = [
     {
         title: 'Ceremony',
-        time: '11:30 AM',
-        info: 'Bride to arrive at 12:00 PM',
+        time: '11:40 AM',
+        info: 'We recommend arriving by 11:30 AM to allow plenty of time for parking.',
         text: ['St. Barnabas Church', 'Swanmore,', 'Southampton, ', 'SO32 2PA'],
 
         link: {
@@ -33,7 +33,7 @@ export const schedule: ScheduleItem[] = [
     {
         title: 'Reception',
         time: 'Arrive after ceremony',
-        info: "We advise taking the motorway only if your SatNav doesn't show delays.",
+        info: 'We recommend checking live updates on your sat nav when travelling to The Bell. If there are delays, alternative routes may be quicker - we suggest to only use the motorway if traffic is clear.',
         text: ['The Bell Inn', 'Lyndhurst', 'New Forest', 'SO43 7HE'],
         image: {
             src: '/images/bell-inn.jpg',
@@ -44,10 +44,16 @@ export const schedule: ScheduleItem[] = [
             text: 'Map',
         },
     },
+
     {
         title: 'Welcome Drinks',
         time: '2:30 PM',
-        text: ['Enjoy a glass', 'of bubbly and', 'live saxophonist'],
+        text: [
+            'Join us for a glass',
+            'of bubbly as we celebrate',
+            'the newlyweds',
+            'with a live Saxophonist',
+        ],
         image: {
             src: '/images/bell-inn-reception.jpg',
             alt: 'Welcome Drinks',
@@ -56,7 +62,7 @@ export const schedule: ScheduleItem[] = [
     {
         title: 'Wedding Breakfast',
         time: '4:00 PM',
-        text: ['A delicious', '3-course', 'meal with wine', 'and speeches.'],
+        text: ['Enjoy a 3-course', 'meal with wine', 'and wedding speeches.'],
         image: {
             src: '/images/bell-inn-wedding-breakfast.jpg',
             alt: 'Wedding Breakfast',

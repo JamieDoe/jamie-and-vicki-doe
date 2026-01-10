@@ -1,7 +1,20 @@
 type parkingInfo = {
     title: string
-    ceremony: string
-    reception: string
+    ceremony: {
+        title: string
+        info: string
+        additionalInfo: string
+    }
+    reception: {
+        title: string
+        info: string
+        additionalInfo?: string
+    }
+}
+
+type GentleRequest = {
+    title: string
+    info: string
 }
 
 type accommodationInfo = {
@@ -14,15 +27,14 @@ type childrenInfo = {
     info: string
 }
 
-type giftsInfo = {
+type FoodOnTheDay = {
     title: string
     info: string
 }
 
-type travelInfo = {
+type giftsInfo = {
     title: string
     info: string
-    advisories: string
 }
 
 type taxiInfo = {
@@ -32,56 +44,64 @@ type taxiInfo = {
 
 type transportInfo = {
     title: string
-    info: string
     taxis: taxiInfo[]
 }
 
 export type ImportantInfo = [
     parkingInfo,
-    accommodationInfo,
-    childrenInfo,
     giftsInfo,
-    travelInfo,
+    FoodOnTheDay,
+    accommodationInfo,
+    GentleRequest,
+    childrenInfo,
     transportInfo
 ]
 
 export const importantInfo: ImportantInfo = [
     {
-        title: 'Parking Information',
-        ceremony:
-            'There is limited parking available at the Church for ceremony guests. Additional parking is available in the primary School car park opposite the Church. You can also park in the village car park located opposite the Church, but tends to fill up quickly. Please arrive early to secure a spot.',
-        reception:
-            'At the Reception venue, there is ample parking available for all guests. Please follow the signs upon arrival to the designated parking areas. If you require assistance or have any special parking needs, do not hesitate to contact the venue staff.',
+        title: 'Travel & Parking',
+        ceremony: {
+            title: 'Church Parking',
+            info: 'There is limited parking available at the church for ceremony guests. Additional parking is available at the Swanmore Primary School staff car park opposite the church.',
+            additionalInfo:
+                'Please note: a classic car show will be taking place nearby on the day, so parking will be limited. We recommend arriving early to secure a space, but street parking is also available.',
+        },
+
+        reception: {
+            title: 'Reception Parking',
+            info: 'There is ample parking at The Bell for all guests.',
+        },
+    },
+    {
+        title: 'Gifts',
+        info: `Your presence at our wedding is more than enough. However, if you would like to give something, a small contribution towards our house deposit would be greatly appreciated as we begin this next chapter together.`,
+    },
+    {
+        title: 'Food on the Day',
+        info: `We recommend having something to eat before the ceremony. Light snacks will be available beforehand, but the wedding breakfast won't be served until around 4pm.`,
     },
     {
         title: 'Accommodation Options',
-        hotel: 'The Bell Inn has plenty of rooms available for guests. Please contact Vicki for booking details. Rooms are limited, so please book early to avoid disappointment - Rooms range from £100-£170 and include breakfast.',
+        hotel: 'The Bell Inn has plenty of rooms available for guests. Please contact Vicki on 07931 241621 for booking details. Rooms are limited, so please book early to avoid disappointment - Rooms range from £100-£170 and include breakfast.',
+    },
+    {
+        title: 'A Gentle Request',
+        info: 'Please note that some guests are sensitive to strong fragrances. If wearing perfume or aftershave, we kindly ask that you keep it light.',
     },
     {
         title: 'Children at the Wedding',
         info: `While we love your little ones, we have decided to make our wedding an adults-only event (Besides Jamie's little sister!). We hope you understand and look forward to celebrating with you!`,
     },
     {
-        title: 'Gifts',
-        info: `Your presence at our wedding is the greatest gift we could ask for. However, if you wish to honour us with a gift, a contribution towards our house deposit would be greatly appreciated as we embark on this new chapter together.`,
-    },
-    {
-        title: 'Travel Information',
-        info: `The Church is located in the heart of the village, easily accessible by car and public transport. For those driving, there is limited parking available at the Church, with additional parking in nearby areas. If you're using public transport, the nearest train station is just a short taxi ride away.`,
-        advisories:
-            'Please be advised of potential blockages on the motorway when traveling to the Bell Inn. We recommend checking traffic updates prior to your journey to ensure a smooth arrival for around 2:30 PM.',
-    },
-    {
-        title: 'Transport Information',
-        info: `For guests requiring transport, we recommend arranging taxis in advance. Local taxi services include:`,
+        title: 'Taxi Services',
         taxis: [
             {
-                name: 'City Cabs',
-                phone: '01234 567890',
+                name: 'New Forest Taxis',
+                phone: '01425 600222',
             },
             {
-                name: 'Town Taxis',
-                phone: '09876 543210',
+                name: 'Radio Taxis',
+                phone: '02380 666666',
             },
         ],
     },

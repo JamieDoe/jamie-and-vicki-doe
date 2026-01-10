@@ -16,7 +16,7 @@ export default function Home() {
     return (
         <main className="min-h-screen pb-20">
             <section className="min-h-screen relative flex flex-col items-center pt-56 gap-4">
-                <h1 className="text-7xl md:text-8xl font-orpheus-pro text-white duration-300">
+                <h1 className="text-7xl md:text-8xl font-orpheus-pro text-white duration-300 text-center">
                     Victoria & Jamie
                 </h1>
                 <p className="font-lora text-2xl md:text-3xl text-white font-semibold duration-300">

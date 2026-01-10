@@ -21,7 +21,7 @@ const travelData: TravelInfo[] = [
         location: 'St Barnabas Church, Swanmore',
         address: 'Church Rd, Swanmore, Southampton, SO32 2PA',
         parkingInfo:
-            'Limited parking is available on-site. Additional parking can be found opposite the church on Church Road.',
+            'Limited parking is available. Additional parking can be found in the Swanmore Primary School staff car park opposite the church.',
         lat: 50.9443853712796,
         lng: -1.180267570921239,
     },
