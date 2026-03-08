@@ -68,15 +68,6 @@ export function Nav() {
                     </Link>
 
                     <MobileNav />
-                    <Link
-                        href="/rsvp"
-                        className={cn(
-                            buttonVariants({ variant: 'default', size: 'lg' }),
-                            'hover:bg-transparent border-2 border-primary text-base bg-primary text-white hover:text-primary'
-                        )}
-                    >
-                        RSVP
-                    </Link>
                 </div>
 
                 {/* Mobile Menu */}

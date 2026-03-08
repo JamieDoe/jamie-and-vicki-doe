@@ -12,18 +12,6 @@ export function RsvpCta() {
                     <h2 className="text-6xl md:text-7xl mb-6">
                         We hope you can join us!
                     </h2>
-                    <Link
-                        href="/rsvp"
-                        className={cn(
-                            buttonVariants({
-                                variant: 'default',
-                                size: 'lg',
-                                className: 'font-lora',
-                            })
-                        )}
-                    >
-                        RSVP
-                    </Link>
                 </div>
                 <Image
                     src="/images/hero.png"
